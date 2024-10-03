@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    height: 90vh;
+    align-items: center;
+}
+body{
+    font-family: 'Press Start 2P';
+}
+.user {
+    background-color: rgba(32, 23, 23, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    padding: 20px 30px;
+    width: 400px;
+    height: 500px;
+    margin-left: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: white;
+    gap: 5px;
+    box-shadow: 0 4px 15px rgba(128, 0, 128, 0.4), 0 6px 20px rgba(75, 0, 130, 0.3);
+    position: relative;
+
+    h3{
+        font-size: 10px;
+        position: absolute;
+        top: 60px;
+    }
+    h1{
+        font-size: 20px;
+    }
+    .win{
+        opacity: 0;
+    }
+
+    .name{
+        background-color: rgba(91, 248, 253, 0.445);
+        padding: 5px;
+        border-radius: 4px;
+        position: absolute;
+        top: 30px;
+        font-size: 15px;
+    }
+    
+    button{
+        padding: 6px 25px;
+        border-radius: 5px;
+        border: none;
+        background-color: #007BFF;
+        background-image: linear-gradient(145deg, #007BFF, #0056b3);
+        color: white;
+        transition: 0.3s ease;
+        cursor: pointer;
+        &:hover{
+            transform: translateY(-3px);
+        }
+        &:active{
+            transform: translateY(4px);
+            opacity: 0.7;
+        }
+    }
+
+    &:hover {
+        text-shadow: 2px 2px 5px rgba(128, 0, 128, 0.5), 3px 3px 10px rgba(75, 0, 130, 0.4);
+        transform: translateY(-5px);
+        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3), 0 8px 30px rgba(0, 0, 0, 0.25);
+    }
+}
+
+
+.video-background{
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+}
+#background-video{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
